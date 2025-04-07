@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-hw3._2pc.client2-1575fde3-2900-4a98-916b-b01fad2e6225</UserSecretsId>
+        <RootNamespace>hw3.TwoPhaseCommit.Client2</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="9.0.3" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.3"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\hw3.twoPhaseCommit.shared\hw3.twoPhaseCommit.shared.csproj" />
+    </ItemGroup>
+</Project>

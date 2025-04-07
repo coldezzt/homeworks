@@ -1,0 +1,20 @@
+syntax = "proto3";
+package meteo;
+
+import "google/protobuf/timestamp.proto";
+option csharp_namespace = "Meteo";
+
+message MeteoRequest {
+  google.protobuf.Timestamp From = 1;
+}
+
+message MeteoResponse {
+  string Time = 1;
+  double Temperature = 2;
+  bool Status = 3;
+  string ErrorMessage = 4;
+}
+
+service MeteoService {
+  rpc GetMeteo(MeteoRequest) returns (stream MeteoResponse);
+}

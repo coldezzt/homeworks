@@ -1,0 +1,13 @@
+﻿syntax = "proto3";
+package secure;
+
+import "google/protobuf/empty.proto";
+option csharp_namespace = "Secure";
+
+message SecretResponse {
+  string Message = 1;
+}
+
+service SecureService {
+  rpc GetSecret (google.protobuf.Empty) returns (SecretResponse);
+}

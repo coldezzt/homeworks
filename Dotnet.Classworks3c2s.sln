@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+#
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "hw1.GraphQL", "hw1.GraphQL", "{677D8023-F28C-4F87-B8A0-1FAD2770DB9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "hw2.GRPC", "hw2.GRPC", "{120FC147-C66D-44F8-ABAA-CA501560D4E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "hw3.Transactional.Patterns", "hw3.Transactional.Patterns", "{D777E840-2CCE-498C-81CD-9618232C4D48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "hw4.Outbox", "hw4.Outbox", "{F63AD4C8-AB5F-4C8F-886E-95583D5F9A06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Contracts", "hw4.TransactionalPatterns2.Outbox\hw4.Shared\Messaging.Contracts.csproj", "{E53F0063-D6D5-445F-A723-92FA24C02E43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shipping.Api", "hw4.TransactionalPatterns2.Outbox\hw4.Shipping.Api\Shipping.Api.csproj", "{65ABD07E-A451-44BF-BD40-8227D2BE68F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.Api", "hw4.TransactionalPatterns2.Outbox\hw4.Orders.Api\Orders.Api.csproj", "{BBC87929-AFF1-4916-8ED2-5CB2386872F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E53F0063-D6D5-445F-A723-92FA24C02E43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E53F0063-D6D5-445F-A723-92FA24C02E43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E53F0063-D6D5-445F-A723-92FA24C02E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E53F0063-D6D5-445F-A723-92FA24C02E43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65ABD07E-A451-44BF-BD40-8227D2BE68F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65ABD07E-A451-44BF-BD40-8227D2BE68F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65ABD07E-A451-44BF-BD40-8227D2BE68F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65ABD07E-A451-44BF-BD40-8227D2BE68F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC87929-AFF1-4916-8ED2-5CB2386872F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC87929-AFF1-4916-8ED2-5CB2386872F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC87929-AFF1-4916-8ED2-5CB2386872F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC87929-AFF1-4916-8ED2-5CB2386872F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E53F0063-D6D5-445F-A723-92FA24C02E43} = {F63AD4C8-AB5F-4C8F-886E-95583D5F9A06}
+		{65ABD07E-A451-44BF-BD40-8227D2BE68F0} = {F63AD4C8-AB5F-4C8F-886E-95583D5F9A06}
+		{BBC87929-AFF1-4916-8ED2-5CB2386872F6} = {F63AD4C8-AB5F-4C8F-886E-95583D5F9A06}
+	EndGlobalSection
+EndGlobal

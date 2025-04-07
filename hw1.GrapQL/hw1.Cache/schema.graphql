@@ -1,0 +1,12 @@
+﻿schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Mutation {
+  addValue(value: String!): Int!
+}
+
+type Query {
+  cacheValue(key: String!): String
+}

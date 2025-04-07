@@ -1,0 +1,7 @@
+﻿schema {
+  subscription: Subscription
+}
+
+type Subscription {
+  onRandomNumber: Int!
+}

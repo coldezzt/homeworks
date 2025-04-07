@@ -1,0 +1,36 @@
+{
+  "name": "grpc-web-front",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "generate": "protoc -I=proto\\ proto\\echo.proto --js_out=import_style=commonjs,binary:src\\generated --grpc-web_out=import_style=typescript,mode=grpcwebtext:src\\generated --ts_out=src\\generated\\ts --plugin=protoc-gen-grpc-web=.\\node_modules\\.bin\\protoc-gen-grpc-web.cmd"
+  },
+  "dependencies": {
+    "@improbable-eng/grpc-web": "^0.15.0",
+    "google-protobuf": "^3.21.4",
+    "grpc-web": "^1.5.0",
+    "protoc-gen-js": "^3.21.4-4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "protoc-gen-grpc-web": "^1.5.0",
+    "ts-protoc-gen": "^0.15.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0"
+  }
+}

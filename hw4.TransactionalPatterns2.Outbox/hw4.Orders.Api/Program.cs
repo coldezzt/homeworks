@@ -42,7 +42,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapPost("orders", async (CreateOrderDto orderDto, NpgsqlDataSource dataSource, IPublishEndpoint publishEndpoint) =>
+app.MapPost("orders", async (CreateOrderDto orderDto, NpgsqlDataSource dataSource) =>
 {
     var order = new Order
     {
@@ -60,8 +60,8 @@ app.MapPost("orders", async (CreateOrderDto orderDto, NpgsqlDataSource dataSourc
         VALUES (@Id, @CustomerName, @ProductName, @Quantity, @TotalPrice, @OrderDate);
         """;
 
-    using var connection = await dataSource.OpenConnectionAsync();
-    using var transaction = await connection.BeginTransactionAsync();
+    await using var connection = await dataSource.OpenConnectionAsync();
+    await using var transaction = await connection.BeginTransactionAsync();
     await connection.ExecuteAsync(sql, order, transaction: transaction);
 
     var orderCreatedEvent = new OrderCreatedIntegrationEvent(order.Id);

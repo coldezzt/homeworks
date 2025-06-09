@@ -1,3 +1,5 @@
+using HotChocolate;
+using HotChocolate.Types;
 using hw1.Subscription;
 
 var builder = WebApplication.CreateBuilder(args);
